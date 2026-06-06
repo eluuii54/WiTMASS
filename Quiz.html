@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boxing Quiz</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+h2, h3{
+color:#00FFFF;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="hero">
+<h1>WITMASS</h1>
+<p>The Ultimate Boxing Knowledge Hub</p>
+</div>
+
+</header>
+
+<nav class="hub-nav">
+
+<div class="hub-title">
+Explore the Hub
+</div>
+
+<div class="hub-links">
+<a href="index.html">Home</a>
+<a href="Boxing 101.html">Boxing 101</a>
+<a href="History.html">History</a>
+<a href="Champions.html">Champions</a>
+<a href="Quiz.html">Quiz</a>
+<a href="Community.html">Community</a>
+</div>
+
+</nav>
+
+<audio id="correctSound">
+<source src="audios/correct-bell.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="wrongSound">
+<source src="audios/wrong-bell.mp3" type="audio/mpeg">
+</audio>
+
+<section>
+
+<div class="quiz-hero-card">
+
+<h2 class="quiz-title">WITMASS Boxing Quiz</h2>
+
+<p class="quiz-intro">
+Step into the WITMASS quiz ring and test your knowledge of boxing rules,
+techniques, history and champions. Complete all ten questions to reveal your
+final Boxing Quiz Result.
+</p>
+
+</div>
+
+<div class="quiz-status">
+
+<div class="floating-score">
+🥊 Score: <span id="score">0</span>/10
+</div>
+
+<div class="quiz-progress-box">
+<h3>Quiz Progress</h3>
+
+<div class="progress-bar">
+<div id="quizProgress" class="progress-fill" style="width:0%;"></div>
+</div>
+</div>
+
+</div>
+
+<div class="quiz-card">
+<h3>Question 1</h3>
+<p>How many rounds can a modern professional championship boxing match have?</p>
+<button onclick="answerQuestion(this, false, 'q1')">10 rounds</button>
+<button onclick="answerQuestion(this, true, 'q1')">12 rounds</button>
+<button onclick="answerQuestion(this, false, 'q1')">15 rounds</button>
+<p id="q1" class="answer-text"></p>
+</div>
+
+<div class="quiz-card">
+<h3>Question 2</h3>
+<p>Which punch is usually used to measure distance and start combinations?</p>
+<button onclick="answerQuestion(this, true, 'q2')">Jab</button>
+<button onclick="answerQuestion(this, false, 'q2')">Uppercut</button>
+<button onclick="answerQuestion(this, false, 'q2')">Hook</button>
+<p id="q2" class="answer-text"></p>
+</div>
+
+<div class="quiz-card">
+<h3>Question 3</h3>
+<p>What does footwork mainly help a boxer control?</p>
+<button onclick="answerQuestion(this, false, 'q3')">Glove weight</button>
+<button onclick="answerQuestion(this, true, 'q3')">Distance and movement</button>
+<button onclick="answerQuestion(this, false, 'q3')">Referee decisions</button>
+<p id="q3" class="answer-text"></p>
+</div>
+
+<div class="quiz-card">
+<h3>Question 4</h3>
+<p>What should a boxer usually keep raised to protect the face?</p>
+<button onclick="answerQuestion(this, true, 'q4')">Guard</button>
+<button onclick="answerQuestion(this, false, 'q4')">Knees</button>
+<button onclick="answerQuestion(this, false, 'q4')">Shoulders only</button>
+<p id="q4" class="answer-text"></p>
+</div>
+
+<div class="quiz-card">
+<h3>Question 5</h3>
+<p>Which rules helped shape modern boxing?</p>
+<button onclick="answerQuestion(this, false, 'q5')">Offside Rules</button>
+<button onclick="answerQuestion(this, true, 'q5')">Queensberry Rules</button>
+<button onclick="answerQuestion(this, false, 'q5')">Knockout Rules</button>
+<p id="q5" class="answer-text"></p>
+</div>
+
+<div class="quiz-card">
+<h3>Question 6</h3>
+<p>What is a knockout?</p>
+<button onclick="answerQuestion(this, true, 'q6')">When a boxer cannot continue after being counted</button>
+<button onclick="answerQuestion(this, false, 'q6')">When a boxer wins by points only</button>
+<button onclick="answerQuestion(this, false, 'q6')">When the bell rings</button>
+<p id="q6" class="answer-text"></p>
+</div>
+
+<div class="quiz-card">
+<h3>Question 7</h3>
+<p>Which punch travels upward from close range?</p>
+<button onclick="answerQuestion(this, false, 'q7')">Jab</button>
+<button onclick="answerQuestion(this, false, 'q7')">Cross</button>
+<button onclick="answerQuestion(this, true, 'q7')">Uppercut</button>
+<p id="q7" class="answer-text"></p>
+</div>
+
+<div class="quiz-card">
+<h3>Question 8</h3>
+<p>What is sparring?</p>
+<button onclick="answerQuestion(this, false, 'q8')">Watching boxing videos</button>
+<button onclick="answerQuestion(this, true, 'q8')">Controlled practice fighting</button>
+<button onclick="answerQuestion(this, false, 'q8')">Cleaning boxing gloves</button>
+<p id="q8" class="answer-text"></p>
+</div>
+
+<div class="quiz-card">
+<h3>Question 9</h3>
+<p>What does a boxing stance help with?</p>
+<button onclick="answerQuestion(this, true, 'q9')">Balance, defense and movement</button>
+<button onclick="answerQuestion(this, false, 'q9')">Only punching harder</button>
+<button onclick="answerQuestion(this, false, 'q9')">Choosing music</button>
+<p id="q9" class="answer-text"></p>
+</div>
+
+<div class="quiz-card">
+<h3>Question 10</h3>
+<p>Which boxer was known as "The Greatest"?</p>
+<button onclick="answerQuestion(this, false, 'q10')">Mike Tyson</button>
+<button onclick="answerQuestion(this, true, 'q10')">Muhammad Ali</button>
+<button onclick="answerQuestion(this, false, 'q10')">Floyd Mayweather</button>
+<p id="q10" class="answer-text"></p>
+</div>
+
+
+</section>
+
+<div id="resultPopup" class="result-popup">
+<div class="result-content">
+
+<h2>🥊 Boxing Quiz Result</h2>
+
+<p id="rank">
+Complete the quiz to reveal your rank.
+</p>
+
+<button onclick="closeResult()">
+Close
+</button>
+
+</div>
+
+</div>
+
+<footer>
+<p>WITMASS © 2026 | Explore • Learn • Champion</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

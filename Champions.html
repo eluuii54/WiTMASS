@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Champions</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+h2,h3{
+color:#00FFFF;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<h1>WITMASS</h1>
+
+<p>The Ultimate Boxing Knowledge Hub</p>
+
+</div>
+
+</header>
+
+<nav class="hub-nav">
+
+<div class="hub-title">
+Explore the Hub
+</div>
+
+<div class="hub-links">
+
+<a href="index.html">Home</a>
+
+<a href="Boxing 101.html">Boxing 101</a>
+
+<a href="History.html">History</a>
+
+<a href="Champions.html">Champions</a>
+
+<a href="Quiz.html">Quiz</a>
+
+<a href="Community.html">Community</a>
+
+</div>
+
+</nav>
+
+<section>
+
+<h2>World Boxing Champions</h2>
+
+<p class="champions-intro">
+
+WITMASS World Boxing Archive is a growing encyclopedia dedicated to documenting
+legendary and influential boxers from around the globe. Boxing has been practiced
+for centuries and has produced champions from nearly every continent.
+Explore the Hall of Fame and search the worldwide archive to discover athletes
+who shaped the history of the sport.
+
+</p>
+
+<h2>WITMASS Hall of Fame</h2>
+
+<p>
+
+These four athletes are among the most iconic figures ever to step inside a boxing ring.
+
+</p>
+
+<div class="champion-grid">
+
+<div class="champion-box">
+
+<img src="images/Ali.jpg">
+
+<h3>Muhammad Ali</h3>
+
+<p>The Greatest</p>
+
+</div>
+
+<div class="champion-box">
+
+<img src="images/tyson.jpeg">
+
+<h3>Mike Tyson</h3>
+
+<p>Iron Mike</p>
+
+</div>
+
+<div class="champion-box">
+
+<img src="images/pacquiao.jpeg">
+
+<h3>Manny Pacquiao</h3>
+
+<p>PacMan</p>
+
+</div>
+
+<div class="champion-box">
+
+<img src="images/mayweather.jpeg">
+
+<h3>Floyd Mayweather Jr.</h3>
+
+<p>Money</p>
+
+</div>
+
+</div>
+
+<h2>🌍 WITMASS World Boxing Archive</h2>
+
+<p>
+
+Search for a country or boxer.
+
+</p>
+
+<input
+
+type="text"
+
+id="searchBox"
+
+placeholder="Search Champion or Country..."
+
+onkeyup="searchChampion()">
+
+<div class="database-container">
+
+<table id="databaseTable" class="champion-table">
+
+<tr>
+<th>Country</th>
+<th>Champion</th>
+<th>Nickname</th>
+<th>Weight Class</th>
+<th>Greatest Achievement</th>
+</tr>
+
+<tr><td>Afghanistan</td><td>Abdul Ahad Waziri</td><td>Afghan Warrior</td><td>Light Heavyweight</td><td>National Champion</td></tr>
+
+<tr><td>Albania</td><td>Kreshnik Qato</td><td>The Eagle</td><td>Middleweight</td><td>European Champion</td></tr>
+
+<tr><td>Algeria</td><td>Loucif Hamani</td><td>Champion</td><td>Middleweight</td><td>Olympian</td></tr>
+
+<tr><td>Argentina</td><td>Carlos Monzón</td><td>El Mono</td><td>Middleweight</td><td>Undisputed Champion</td></tr>
+
+<tr><td>Armenia</td><td>Vic Darchinyan</td><td>Raging Bull</td><td>Flyweight</td><td>Multiple World Titles</td></tr>
+
+<tr><td>Australia</td><td>Jeff Fenech</td><td>Marrickville Mauler</td><td>Featherweight</td><td>Three Weight World Champion</td></tr>
+
+<tr><td>Austria</td><td>Marcos Nader</td><td>Champion</td><td>Middleweight</td><td>European Champion</td></tr>
+
+<tr><td>Azerbaijan</td><td>Magomedrasul Majidov</td><td>Titan</td><td>Heavyweight</td><td>World Amateur Champion</td></tr>
+
+<tr><td>Bahamas</td><td>Sherman Williams</td><td>Tank</td><td>Heavyweight</td><td>WBO NABO Champion</td></tr>
+
+<tr><td>Bangladesh</td><td>Mohammad Ali Jinnah</td><td>Champion</td><td>Lightweight</td><td>National Champion</td></tr>
+
+<tr><td>Belgium</td><td>Delfine Persoon</td><td>Queen</td><td>Lightweight</td><td>WBC World Champion</td></tr>
+
+<tr><td>Belize</td><td>Ivan Robinson</td><td>Champion</td><td>Welterweight</td><td>International Champion</td></tr>
+
+<tr><td>Bolivia</td><td>Jennifer Salinas</td><td>Queen</td><td>Featherweight</td><td>WIBA Champion</td></tr>
+
+<tr><td>Bosnia</td><td>Adnan Ćatić</td><td>Felix Sturm</td><td>Middleweight</td><td>Multiple World Champion</td></tr>
+
+<tr><td>Brazil</td><td>Acelino Freitas</td><td>Popó</td><td>Lightweight</td><td>Four-Time World Champion</td></tr>
+
+<tr><td>Bulgaria</td><td>Kubrat Pulev</td><td>Cobra</td><td>Heavyweight</td><td>European Champion</td></tr>
+
+<tr><td>Cambodia</td><td>Eh Phuthong</td><td>Legend</td><td>Welterweight</td><td>National Icon</td></tr>
+
+<tr><td>Cameroon</td><td>Francis Ngannou</td><td>Predator</td><td>Heavyweight</td><td>Professional Boxer & MMA Champion</td></tr>
+
+<tr><td>Canada</td><td>Arturo Gatti</td><td>Thunder</td><td>Light Welterweight</td><td>Hall of Fame</td></tr>
+
+<tr><td>Chile</td><td>Martín Vargas</td><td>Champion</td><td>Flyweight</td><td>Four-Time World Challenger</td></tr>
+
+<tr><td>China</td><td>Zou Shiming</td><td>Olympian</td><td>Flyweight</td><td>2 Olympic Gold Medals</td></tr>
+
+<tr><td>Colombia</td><td>Antonio Cervantes</td><td>Kid Pambelé</td><td>Light Welterweight</td><td>World Champion</td></tr>
+
+<tr><td>Costa Rica</td><td>Hanna Gabriels</td><td>Queen</td><td>Super Welterweight</td><td>World Champion</td></tr>
+
+<tr><td>Croatia</td><td>Filip Hrgović</td><td>El Animal</td><td>Heavyweight</td><td>Olympic Bronze Medalist</td></tr>
+
+<tr><td>Cuba</td><td>Teófilo Stevenson</td><td>Legend</td><td>Heavyweight</td><td>3 Olympic Gold Medals</td></tr>
+
+<tr><td>Cyprus</td><td>Andreas Evagorou</td><td>Champion</td><td>Welterweight</td><td>National Champion</td></tr>
+
+<tr><td>Czech Republic</td><td>Lukáš Konečný</td><td>Champion</td><td>Light Middleweight</td><td>European Champion</td></tr>
+
+<tr><td>Denmark</td><td>Mikkel Kessler</td><td>Viking Warrior</td><td>Super Middleweight</td><td>World Champion</td></tr>
+
+<tr><td>Dominican Republic</td><td>Joan Guzmán</td><td>Champion</td><td>Super Bantamweight</td><td>World Champion</td></tr>
+
+<tr><td>Ecuador</td><td>Carlos Góngora</td><td>Champion</td><td>Middleweight</td><td>Olympian</td></tr>
+
+<tr><td>Egypt</td><td>Mohamed Hikal</td><td>Champion</td><td>Middleweight</td><td>African Champion</td></tr>
+
+<tr><td>England</td><td>Tyson Fury</td><td>Gypsy King</td><td>Heavyweight</td><td>World Heavyweight Champion</td></tr>
+
+<tr><td>Estonia</td><td>Jaan Karlson</td><td>Champion</td><td>Middleweight</td><td>National Champion</td></tr>
+
+<tr><td>Finland</td><td>Eva Wahlström</td><td>Champion</td><td>Super Featherweight</td><td>WBC World Champion</td></tr>
+
+<tr><td>France</td><td>Marcel Cerdan</td><td>Bomber</td><td>Middleweight</td><td>World Champion</td></tr>
+
+<tr><td>Georgia</td><td>Avtandil Khurtsidze</td><td>Mini Tyson</td><td>Middleweight</td><td>Intercontinental Champion</td></tr>
+
+<tr><td>Germany</td><td>Max Schmeling</td><td>Legend</td><td>Heavyweight</td><td>World Heavyweight Champion</td></tr>
+
+<tr><td>Ghana</td><td>Azumah Nelson</td><td>Professor</td><td>Featherweight</td><td>Hall of Fame</td></tr>
+
+<tr><td>Greece</td><td>Andreas Katsouris</td><td>Champion</td><td>Welterweight</td><td>National Champion</td></tr>
+
+<tr><td>Guatemala</td><td>Lester Martínez</td><td>Champion</td><td>Super Middleweight</td><td>Olympian</td></tr>
+
+<tr><td>Haiti</td><td>Adonis Stevenson</td><td>Superman</td><td>Light Heavyweight</td><td>WBC Champion</td></tr>
+
+<tr><td>Honduras</td><td>Teófimo López</td><td>Takeover</td><td>Lightweight</td><td>Two-Division World Champion</td></tr>
+
+<tr><td>Hungary</td><td>László Papp</td><td>Legend</td><td>Middleweight</td><td>3 Olympic Gold Medals</td></tr>
+
+<tr><td>Iceland</td><td>Gunnar Kolbeinsson</td><td>Champion</td><td>Middleweight</td><td>National Champion</td></tr>
+
+<tr><td>India</td><td>Vijender Singh</td><td>Olympian</td><td>Middleweight</td><td>Olympic Bronze Medal</td></tr>
+
+<tr><td>Indonesia</td><td>Chris John</td><td>Dragon</td><td>Featherweight</td><td>World Champion</td></tr>
+
+<tr><td>Iran</td><td>Ehsan Rouzbahani</td><td>Champion</td><td>Light Heavyweight</td><td>Olympian</td></tr>
+
+<tr><td>Iraq</td><td>Ali Mazaheri</td><td>Champion</td><td>Heavyweight</td><td>Olympian</td></tr>
+
+<tr><td>Ireland</td><td>Katie Taylor</td><td>Bray Bomber</td><td>Lightweight</td><td>Olympic Gold & Undisputed Champion</td></tr>
+
+<tr><td>Israel</td><td>Roman Greenberg</td><td>Champion</td><td>Heavyweight</td><td>International Champion</td></tr>
+
+<tr><td>Italy</td><td>Nino Benvenuti</td><td>Legend</td><td>Middleweight</td><td>Olympic Gold & World Champion</td></tr>
+
+<tr><td>Jamaica</td><td>Mike McCallum</td><td>Bodysnatcher</td><td>Light Middleweight</td><td>Three-Division World Champion</td></tr>
+
+<tr><td>Japan</td><td>Naoya Inoue</td><td>Monster</td><td>Super Bantamweight</td><td>Undisputed Champion</td></tr>
+
+<tr><td>Jordan</td><td>Zeyad Eashash</td><td>Champion</td><td>Welterweight</td><td>Olympian</td></tr>
+
+<tr><td>Kazakhstan</td><td>Gennady Golovkin</td><td>GGG</td><td>Middleweight</td><td>Unified World Champion</td></tr>
+
+<tr><td>Kenya</td><td>Fatuma Zarika</td><td>Queen</td><td>Super Bantamweight</td><td>WBC World Champion</td></tr>
+
+<tr><td>Kosovo</td><td>Robin Krasniqi</td><td>Champion</td><td>Light Heavyweight</td><td>European Champion</td></tr>
+
+<tr><td>Kuwait</td><td>Nasser Al-Shatti</td><td>Champion</td><td>Middleweight</td><td>National Champion</td></tr>
+
+<tr><td>Kyrgyzstan</td><td>Dmitry Bivol</td><td>The Boxer</td><td>Light Heavyweight</td><td>Undisputed Champion</td></tr>
+
+<tr><td>Laos</td><td>Khamphouvanh</td><td>Champion</td><td>Flyweight</td><td>National Champion</td></tr>
+
+<tr><td>Latvia</td><td>Mairis Briedis</td><td>Champion</td><td>Cruiserweight</td><td>World Champion</td></tr>
+
+<tr><td>Lebanon</td><td>Ali Mansour</td><td>Champion</td><td>Heavyweight</td><td>Olympian</td></tr>
+
+<tr><td>Libya</td><td>Malik Zinad</td><td>Champion</td><td>Light Heavyweight</td><td>African Champion</td></tr>
+
+<tr><td>Lithuania</td><td>Eimantas Stanionis</td><td>Champion</td><td>Welterweight</td><td>World Champion</td></tr>
+
+<tr><td>Luxembourg</td><td>Robert Helenius</td><td>Nordic Nightmare</td><td>Heavyweight</td><td>European Champion</td></tr>
+
+<tr><td>Malaysia</td><td>Muhammad Farkhan</td><td>Champion</td><td>Cruiserweight</td><td>Asian Champion</td></tr>
+
+<tr><td>Mexico</td><td>Canelo Alvarez</td><td>Canelo</td><td>Super Middleweight</td><td>Undisputed Champion</td></tr>
+
+<tr><td>Moldova</td><td>Veaceslav Gojan</td><td>Champion</td><td>Bantamweight</td><td>Olympic Medalist</td></tr>
+
+<tr><td>Mongolia</td><td>Tugstsogt Nyambayar</td><td>King Tug</td><td>Featherweight</td><td>Olympic Silver Medalist</td></tr>
+
+<tr><td>Montenegro</td><td>Nikola Sjekloca</td><td>Champion</td><td>Super Middleweight</td><td>European Champion</td></tr>
+
+<tr><td>Morocco</td><td>Hassan N'Dam</td><td>Champion</td><td>Middleweight</td><td>World Champion</td></tr>
+
+<tr><td>Myanmar</td><td>Aung La Nsang</td><td>Burmese Python</td><td>Middleweight</td><td>MMA & Boxing Star</td></tr>
+
+<tr><td>Nepal</td><td>Deepak Maharjan</td><td>Champion</td><td>Lightweight</td><td>National Champion</td></tr>
+
+<tr><td>Netherlands</td><td>Regilio Tuur</td><td>Champion</td><td>Super Featherweight</td><td>World Champion</td></tr>
+
+<tr><td>New Zealand</td><td>Joseph Parker</td><td>South Auckland Warrior</td><td>Heavyweight</td><td>WBO World Champion</td></tr>
+
+<tr><td>Nigeria</td><td>Anthony Joshua</td><td>AJ</td><td>Heavyweight</td><td>Two-Time Unified Champion</td></tr>
+
+<tr><td>North Korea</td><td>Ri Chol-guk</td><td>Champion</td><td>Flyweight</td><td>Asian Champion</td></tr>
+
+<tr><td>Norway</td><td>Cecilia Brækhus</td><td>First Lady</td><td>Welterweight</td><td>Undisputed Champion</td></tr>
+
+<tr><td>Pakistan</td><td>Muhammad Waseem</td><td>Falcon</td><td>Flyweight</td><td>Asian Champion</td></tr>
+
+<tr><td>Palestine</td><td>Nidal Al-Haj</td><td>Champion</td><td>Middleweight</td><td>National Champion</td></tr>
+
+<tr><td>Panama</td><td>Roberto Durán</td><td>Hands of Stone</td><td>Lightweight</td><td>Four-Division World Champion</td></tr>
+
+<tr><td>Paraguay</td><td>Carlos Adan Jara</td><td>Champion</td><td>Welterweight</td><td>National Champion</td></tr>
+
+<tr><td>Peru</td><td>Kina Malpartida</td><td>Dinamita</td><td>Super Featherweight</td><td>World Champion</td></tr>
+
+<tr><td>Philippines</td><td>Manny Pacquiao</td><td>PacMan</td><td>Welterweight</td><td>Eight-Division World Champion</td></tr>
+
+<tr><td>Poland</td><td>Tomasz Adamek</td><td>Góral</td><td>Heavyweight</td><td>Two-Division World Champion</td></tr>
+
+<tr><td>Portugal</td><td>Jorge Pina</td><td>Champion</td><td>Middleweight</td><td>Paralympian & Boxer</td></tr>
+
+<tr><td>Puerto Rico</td><td>Félix Trinidad</td><td>Tito</td><td>Welterweight</td><td>Three-Division World Champion</td></tr>
+
+<tr><td>Romania</td><td>Lucian Bute</td><td>Champion</td><td>Super Middleweight</td><td>IBF World Champion</td></tr>
+
+<tr><td>Russia</td><td>Kostya Tszyu</td><td>Thunder</td><td>Light Welterweight</td><td>Undisputed Champion</td></tr>
+
+<tr><td>Saudi Arabia</td><td>Ziyad Almaayouf</td><td>Champion</td><td>Lightweight</td><td>Professional Boxer</td></tr>
+
+<tr><td>Scotland</td><td>Josh Taylor</td><td>Tartan Tornado</td><td>Light Welterweight</td><td>Undisputed Champion</td></tr>
+
+<tr><td>Senegal</td><td>Battling Siki</td><td>Legend</td><td>Light Heavyweight</td><td>World Champion</td></tr>
+
+<tr><td>Serbia</td><td>Veljko Ražnatović</td><td>Champion</td><td>Cruiserweight</td><td>National Champion</td></tr>
+
+<tr><td>Singapore</td><td>Muhamad Ridhwan</td><td>Champion</td><td>Featherweight</td><td>WBC Asian Champion</td></tr>
+
+<tr><td>Slovakia</td><td>Tomáš Kovács</td><td>Champion</td><td>Cruiserweight</td><td>European Champion</td></tr>
+
+<tr><td>Slovenia</td><td>Dejan Zavec</td><td>Champion</td><td>Welterweight</td><td>IBF World Champion</td></tr>
+
+<tr><td>Somalia</td><td>Ramla Ali</td><td>Champion</td><td>Featherweight</td><td>Olympian</td></tr>
+
+<tr><td>South Africa</td><td>Dingaan Thobela</td><td>Rose of Soweto</td><td>Lightweight</td><td>World Champion</td></tr>
+
+<tr><td>South Korea</td><td>Jang Jung-koo</td><td>Champion</td><td>Light Flyweight</td><td>World Champion</td></tr>
+
+<tr><td>Spain</td><td>Kiko Martínez</td><td>Champion</td><td>Featherweight</td><td>IBF World Champion</td></tr>
+
+<tr><td>Sri Lanka</td><td>Manju Wanniarachchi</td><td>Champion</td><td>Bantamweight</td><td>Commonwealth Medalist</td></tr>
+
+<tr><td>Sweden</td><td>Badou Jack</td><td>The Ripper</td><td>Light Heavyweight</td><td>Three-Division Champion</td></tr>
+
+<tr><td>Switzerland</td><td>Arnold Gjergjaj</td><td>Champion</td><td>Heavyweight</td><td>European Champion</td></tr>
+
+<tr><td>Syria</td><td>Ahmad Ghousoon</td><td>Champion</td><td>Middleweight</td><td>Asian Champion</td></tr>
+
+<tr><td>Taiwan</td><td>Lin Yu-ting</td><td>Champion</td><td>Featherweight</td><td>World Champion</td></tr>
+
+<tr><td>Tajikistan</td><td>Bakhodur Usmonov</td><td>Champion</td><td>Lightweight</td><td>Olympian</td></tr>
+
+<tr><td>Tanzania</td><td>Hassan Mwakinyo</td><td>Champion</td><td>Super Welterweight</td><td>African Champion</td></tr>
+
+<tr><td>Thailand</td><td>Khaosai Galaxy</td><td>Legend</td><td>Super Flyweight</td><td>Hall of Fame</td></tr>
+
+<tr><td>Tunisia</td><td>Ahmed Mejri</td><td>Champion</td><td>Middleweight</td><td>African Champion</td></tr>
+
+<tr><td>Türkiye</td><td>Cem Kılıç</td><td>Turkish Delight</td><td>Middleweight</td><td>International Champion</td></tr>
+
+<tr><td>Uganda</td><td>Kassim Ouma</td><td>Dream</td><td>Light Middleweight</td><td>IBF Champion</td></tr>
+
+<tr><td>Ukraine</td><td>Oleksandr Usyk</td><td>The Cat</td><td>Heavyweight</td><td>Undisputed Champion</td></tr>
+
+<tr><td>United Arab Emirates</td><td>Eisa Al Dah</td><td>Champion</td><td>Welterweight</td><td>National Champion</td></tr>
+
+<tr><td>USA</td><td>Muhammad Ali</td><td>The Greatest</td><td>Heavyweight</td><td>3× World Champion</td></tr>
+
+<tr><td>Uzbekistan</td><td>Hasanboy Dusmatov</td><td>Champion</td><td>Flyweight</td><td>Olympic Gold Medal</td></tr>
+
+<tr><td>Venezuela</td><td>Jorge Linares</td><td>Golden Boy</td><td>Lightweight</td><td>Three-Division Champion</td></tr>
+
+<tr><td>Vietnam</td><td>Nguyễn Văn Hải</td><td>Champion</td><td>Flyweight</td><td>National Champion</td></tr>
+
+<tr><td>Wales</td><td>Joe Calzaghe</td><td>Pride of Wales</td><td>Super Middleweight</td><td>Undefeated World Champion</td></tr>
+
+<tr><td>Yemen</td><td>Ali Raymi</td><td>Champion</td><td>Flyweight</td><td>National Champion</td></tr>
+
+<tr><td>Zambia</td><td>Esther Phiri</td><td>Champion</td><td>Bantamweight</td><td>World Champion</td></tr>
+
+<tr><td>Zimbabwe</td><td>Charles Manyuchi</td><td>Champion</td><td>Welterweight</td><td>WBC International Champion</td></tr>
+
+</table>
+
+
+</div>
+
+<div class="interactive-champion">
+
+<h2>Champion Spotlight</h2>
+
+<p>
+Choose any boxer from the WITMASS World Boxing Archive.
+</p>
+
+<select id="championSelect" onchange="showSelectedChampion()">
+<option value="">Select a boxer...</option>
+</select>
+
+<div id="championInfo" class="champion-info">
+
+<h3>Spotlight</h3>
+
+<p>Select a boxer from the dropdown list.</p>
+
+</div>
+
+</div>
+
+<h2>Legendary Moments</h2>
+
+<p>
+Watch legendary boxing highlights featuring some of the greatest fighters
+ever to step inside the ring.
+</p>
+
+<video class="featured-video" controls>
+<source src="videos/champions.mp4" type="video/mp4">
+</video>
+
+</section>
+
+<footer>
+<p>WITMASS © 2026 | Explore • Learn • Champion</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
