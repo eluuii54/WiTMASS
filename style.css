@@ -1847,6 +1847,7 @@ margin:0;
 }
 
 .quiz-status{
+text-align:center;
 display:flex;
 justify-content:space-between;
 align-items:center;
