@@ -44,10 +44,10 @@ if(!matchStarted){
 
 matchStarted = true;
 
-let startBell = document.getElementById("startBell");
+let match-sound = document.getElementById("match-sound");
 
-if(startBell){
-startBell.play();
+if(match-sound){
+match-sound.play();
 }
 
 }
