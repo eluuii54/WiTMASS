@@ -44,10 +44,10 @@ if(!matchStarted){
 
 matchStarted = true;
 
-let matchSound = document.getElementById("matchSound");
+let startBell = document.getElementById("startBell");
 
-if(matchSound){
-matchSound.play();
+if(startBell){
+startBell.play();
 }
 
 }
@@ -89,14 +89,13 @@ scoreBox.innerHTML = score;
 
 if(answeredQuestions.length === 10){
 
-let matchSound = document.getElementById("matchSound");
+let finishBell = document.getElementById("finishBell");
 
-if(matchSound){
-matchSound.pause();
-matchSound.currentTime = 0;
+if(finishBell){
+finishBell.play();
 }
 
-showRank();
+setTimeout(showRank,1200);
 
 }
 
