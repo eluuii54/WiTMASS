@@ -30,6 +30,7 @@ window.addEventListener("load", activateTimeline);
 
 let score = 0;
 let answeredQuestions = [];
+let matchStarted = false;
 
 function answerQuestion(button, isCorrect, questionId){
 
@@ -39,43 +40,64 @@ return;
 
 answeredQuestions.push(questionId);
 
+if(!matchStarted){
+
+matchStarted = true;
+
+let matchSound = document.getElementById("matchSound");
+
+if(matchSound){
+matchSound.play();
+}
+
+}
+
 let progress = document.getElementById("quizProgress");
 
 if(progress){
-progress.style.width = (answeredQuestions.length/10*100)+"%";
+progress.style.width = (answeredQuestions.length / 10 * 100) + "%";
 }
 
 let resultText = document.getElementById(questionId);
 
 if(isCorrect){
+
 score++;
 
-let correctSound = document.getElementById("correctSound");
-if(correctSound){
-correctSound.play();
+button.classList.add("correct-btn");
+
+if(resultText){
+resultText.innerHTML = "✅ Correct!";
 }
 
-button.classList.add("correct-btn");
-resultText.innerHTML = "✅ Correct!";
 }
 else{
 
-let wrongSound = document.getElementById("wrongSound");
-if(wrongSound){
-wrongSound.play();
-}
-
 button.classList.add("wrong-btn");
+
+if(resultText){
 resultText.innerHTML = "❌ Incorrect!";
 }
 
+}
+
 let scoreBox = document.getElementById("score");
+
 if(scoreBox){
 scoreBox.innerHTML = score;
 }
 
 if(answeredQuestions.length === 10){
+
+let matchSound = document.getElementById("matchSound");
+
+if(matchSound){
+matchSound.pause();
+matchSound.currentTime = 0;
+}
+
 showRank();
+
 }
 
 }
@@ -103,6 +125,16 @@ rank.innerHTML = "💪 Keep Training (" + score + "/10)";
 }
 
 resultPopup.style.display = "flex";
+
+}
+
+function closeResult(){
+
+let resultPopup = document.getElementById("resultPopup");
+
+if(resultPopup){
+resultPopup.style.display = "none";
+}
 
 }
 
@@ -203,6 +235,10 @@ for(let i = 1; i < rows.length; i++){
 
 let cells = rows[i].getElementsByTagName("td");
 
+if(cells.length < 5){
+continue;
+}
+
 let country = cells[0].innerHTML;
 let champion = cells[1].innerHTML;
 let nickname = cells[2].innerHTML;
@@ -212,7 +248,6 @@ let achievement = cells[4].innerHTML;
 let option = document.createElement("option");
 
 option.value = country + "|" + champion + "|" + nickname + "|" + weight + "|" + achievement;
-
 option.innerHTML = champion + " - " + country;
 
 select.appendChild(option);
@@ -223,8 +258,14 @@ select.appendChild(option);
 
 function showSelectedChampion(){
 
-let selected = document.getElementById("championSelect").value;
+let select = document.getElementById("championSelect");
 let info = document.getElementById("championInfo");
+
+if(!select || !info){
+return;
+}
+
+let selected = select.value;
 
 if(selected === ""){
 info.innerHTML = "<h3>Spotlight</h3><p>Select a boxer from the dropdown list.</p>";
@@ -240,18 +281,12 @@ let weight = data[3];
 let achievement = data[4];
 
 info.innerHTML =
-"<h3>"+champion+"</h3>"+
-"<p>"+
-champion+" is from <b>"+country+"</b>, known as <b>"+nickname+"</b>. "+
-"This boxer fought in the <b>"+weight+"</b> division and is remembered for <b>"+achievement+"</b>."+
+"<h3>" + champion + "</h3>" +
+"<p>" +
+champion + " is from <b>" + country + "</b>, known as <b>" + nickname + "</b>. " +
+"This boxer fought in the <b>" + weight + "</b> division and is remembered for <b>" + achievement + "</b>." +
 "</p>";
 
 }
 
 window.addEventListener("load", loadChampionDropdown);
-
-function closeResult(){
-
-document.getElementById("resultPopup").style.display="none";
-
-}
