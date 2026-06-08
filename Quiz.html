@@ -19,7 +19,6 @@ color:#00FFFF;
 <h1>WITMASS</h1>
 <p>The Ultimate Boxing Knowledge Hub</p>
 </div>
-
 </header>
 
 <nav class="hub-nav">
@@ -43,10 +42,6 @@ Explore the Hub
 <source src="audios/match-sound.mp3" type="audio/mpeg">
 </audio>
 
-<audio id="matchSound" loop>
-<source src="audios/match-sound.mp3" type="audio/mpeg">
-</audio>
-  
 <section>
 
 <div class="quiz-hero-card">
@@ -65,6 +60,16 @@ final Boxing Quiz Result.
 
 <div class="floating-score">
 🥊 Score: <span id="score">0</span>/10
+</div>
+
+<div class="quiz-progress-box">
+
+<h3>Quiz Progress</h3>
+
+<div class="progress-bar">
+<div id="quizProgress" class="progress-fill" style="width:0%;"></div>
+</div>
+
 </div>
 
 </div>
@@ -159,10 +164,10 @@ final Boxing Quiz Result.
 <p id="q10" class="answer-text"></p>
 </div>
 
-
 </section>
 
 <div id="resultPopup" class="result-popup">
+
 <div class="result-content">
 
 <h2>🥊 Boxing Quiz Result</h2>
